@@ -14,7 +14,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">Contact Us</h1>
+          <h1 className="text-4xl md:text-6xl font-family-display font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-muted-foreground">
             Ready to secure your business? Reach out to schedule a consultation or ask a question.
           </p>

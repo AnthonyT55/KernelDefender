@@ -12,7 +12,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">About KernelDefender</h1>
+          <h1 className="text-4xl md:text-6xl font-family-display font-bold mb-6">About KernelDefender</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             We are a dedicated cybersecurity firm based in Danville, Virginia, committed to protecting local businesses from the evolving landscape of digital threats.
           </p>
@@ -64,7 +64,7 @@ export default function About() {
         </div>
 
         <div className="bg-card border border-white/10 rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-display font-bold mb-4">Partner with KernelDefender</h2>
+          <h2 className="text-3xl font-family-display font-bold mb-4">Partner with KernelDefender</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Your data is your most valuable asset. Let us help you protect it with professional rigor and technical expertise.
           </p>

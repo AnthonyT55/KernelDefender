@@ -50,13 +50,13 @@ export default function Home() {
               Serving Danville, VA Businesses
             </motion.div>
             
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-display font-bold leading-tight bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-family-display font-bold leading-tight bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
               Secure Your Business <br /> Before The Breach
             </motion.h1>
             
             <motion.p variants={fadeIn} className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Professional IT Risk Assessment, Backup Validation, and Network Documentation. 
-              Enterprise-grade defense for modern businesses.
+              Professional IT Risk Assessment, Backup Validation, and Modern Security Audits.
+              Enterprise-grade defense for Danville area businesses.
             </motion.p>
             
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -85,7 +85,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
+              <h2 className="text-3xl md:text-4xl font-family-display font-bold text-white">
                 "We're too small to be a target." <br />
                 <span className="text-destructive">That's a dangerous myth.</span>
               </h2>
@@ -134,7 +134,7 @@ export default function Home() {
       <section className="py-24 relative">
         <div className="container px-4 mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Our Core Defenses</h2>
+            <h2 className="text-3xl md:text-5xl font-family-display font-bold mb-4">Our Core Defenses</h2>
             <p className="text-muted-foreground text-lg">
               We focus on the three pillars of fundamental IT security to keep your business operational and safe.
             </p>
@@ -144,7 +144,7 @@ export default function Home() {
             <Card className="bg-card border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 group">
               <CardHeader>
                 <ShieldAlert className="w-12 h-12 text-primary mb-4" />
-                <CardTitle className="text-xl font-display">IT Risk Assessment</CardTitle>
+                <CardTitle className="text-xl font-family-display">IT Risk Assessment</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
@@ -161,7 +161,7 @@ export default function Home() {
             <Card className="bg-card border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 group">
               <CardHeader>
                 <Database className="w-12 h-12 text-primary mb-4" />
-                <CardTitle className="text-xl font-display">Backup Validation</CardTitle>
+                <CardTitle className="text-xl font-family-display">Backup Validation</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
@@ -178,7 +178,7 @@ export default function Home() {
             <Card className="bg-card border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 group">
               <CardHeader>
                 <Network className="w-12 h-12 text-primary mb-4" />
-                <CardTitle className="text-xl font-display">Network Cleanup</CardTitle>
+                <CardTitle className="text-xl font-family-display">Network Cleanup</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">

@@ -21,7 +21,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Link href="/">
             <a className="flex items-center gap-2 group">
               <Shield className="h-6 w-6 text-primary transition-transform group-hover:scale-110" />
-              <span className="font-display font-bold text-xl tracking-tight">
+              <span className="font-family-display font-bold text-xl tracking-tight">
                 Kernel<span className="text-primary">Defender</span>
               </span>
             </a>
@@ -88,7 +88,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <Shield className="h-5 w-5 text-primary" />
-              <span className="font-display font-bold text-lg">KernelDefender</span>
+              <span className="font-family-display font-bold text-lg">KernelDefender</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
               Professional IT security services for businesses in Danville, VA. 
