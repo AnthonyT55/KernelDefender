@@ -72,9 +72,6 @@ export default function Services() {
               className="grid md:grid-cols-2 gap-12 items-center"
             >
               <div className={`space-y-6 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-4">
-                  <service.icon className="w-8 h-8" />
-                </div>
                 <h2 className="text-3xl font-family-display font-bold">{service.title}</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {service.description}
@@ -94,20 +91,6 @@ export default function Services() {
               
               <div className={`relative ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                 <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-20" />
-                <div className="relative bg-card border border-white/10 rounded-2xl p-8 h-full flex flex-col justify-center min-h-[300px]">
-                  {/* Decorative Elements */}
-                  <div className="space-y-4 opacity-50">
-                    <div className="h-2 w-1/3 bg-white/20 rounded-full" />
-                    <div className="h-2 w-2/3 bg-white/20 rounded-full" />
-                    <div className="h-2 w-1/2 bg-white/20 rounded-full" />
-                    <div className="h-2 w-3/4 bg-white/20 rounded-full" />
-                  </div>
-                  <div className="mt-8 flex justify-end">
-                    <div className="h-12 w-12 rounded-full border-2 border-primary/30 flex items-center justify-center">
-                      <div className="h-2 w-2 bg-primary rounded-full animate-pulse" />
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
           ))}

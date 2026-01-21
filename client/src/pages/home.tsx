@@ -62,7 +62,7 @@ export default function Home() {
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link href="/contact">
                 <Button size="lg" className="h-12 px-8 text-base">
-                  Get a Security Audit
+                  Get a free consultation
                 </Button>
               </Link>
               <Link href="/services">
