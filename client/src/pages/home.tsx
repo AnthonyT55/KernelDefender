@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShieldAlert, Database, Network, ArrowRight, Lock, Server, FileWarning } from "lucide-react";
+import { ArrowRight, Lock, Server, FileWarning, ShieldAlert, Database, Network } from "lucide-react";
 import heroImage from "@assets/generated_images/abstract_cybersecurity_network_background_with_dark_blue_tones.png";
 
 const fadeIn = {
@@ -35,14 +34,18 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
         </div>
 
-        <div className="container px-4 relative z-20 text-center max-w-4xl mx-auto">
+        <div className="container px-4 relative z-20 max-w-5xl mx-auto">
           <motion.div 
             initial="initial"
             animate="animate"
             variants={stagger}
-            className="space-y-6"
+            className="p-12 md:p-20 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] relative overflow-hidden group text-center"
           >
-            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
+            {/* Blue Halo Light Effect */}
+            <div className="absolute -top-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:bg-primary/30 transition-colors" />
+            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[100px] group-hover:bg-primary/30 transition-colors" />
+
+            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 relative z-10">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -50,23 +53,23 @@ export default function Home() {
               Serving Danville, VA Businesses
             </motion.div>
             
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-family-display font-bold leading-tight bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-family-display font-bold leading-tight bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent mb-8 relative z-10">
               Secure Your Business <br /> Before The Breach
             </motion.h1>
             
-            <motion.p variants={fadeIn} className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <motion.p variants={fadeIn} className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10 relative z-10">
               Professional IT Risk Assessment, Backup Validation, and Modern Security Audits.
               Enterprise-grade defense for Danville area businesses.
             </motion.p>
             
-            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 justify-center pt-4 relative z-10">
               <Link href="/contact">
-                <Button size="lg" className="h-12 px-8 text-base">
-                  Get a free consultation
+                <Button size="lg" className="h-14 px-10 text-lg font-medium shadow-xl shadow-primary/20">
+                  Get your free consultation
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="h-12 px-8 text-base bg-transparent border-white/10 hover:bg-white/5">
+                <Button variant="outline" size="lg" className="h-14 px-10 text-lg font-medium bg-transparent border-white/10 hover:bg-white/5">
                   View Our Services
                 </Button>
               </Link>
@@ -76,137 +79,128 @@ export default function Home() {
       </section>
 
       {/* The Problem Section */}
-      <section className="py-24 bg-card/50 border-y border-white/5 relative">
-        <div className="container px-4 mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-3xl md:text-4xl font-family-display font-bold text-white">
-                "We're too small to be a target." <br />
-                <span className="text-destructive">That's a dangerous myth.</span>
-              </h2>
-              <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
-                <p>
-                  Cybercriminals aren't just looking for Fortune 500 companies. They use automated bots to scan the internet for vulnerabilities—any vulnerability.
-                </p>
-                <p>
-                  If your network has an open door, they will walk through it. Ransomware doesn't discriminate by business size. In fact, small businesses are often preferred targets because they typically lack the defenses of larger corporations.
-                </p>
-                <div className="p-4 bg-destructive/10 border border-destructive/20 rounded-lg mt-6">
-                  <p className="text-destructive font-medium flex gap-2 items-start">
-                    <FileWarning className="w-5 h-5 shrink-0 mt-0.5" />
-                    Without proper backups and security hygiene, a single click can shut down your operations for days or weeks.
+      <section className="py-24 relative overflow-hidden">
+        <div className="container px-4 mx-auto max-w-6xl relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="p-12 md:p-16 rounded-3xl bg-white/[0.01] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(239,68,68,0.1)] relative overflow-hidden"
+          >
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-destructive/10 rounded-full blur-[120px]" />
+            
+            <div className="grid md:grid-cols-2 gap-16 items-center relative z-10">
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-5xl font-family-display font-bold text-white">
+                  "We're too small to be a target." <br />
+                  <span className="text-destructive">That's a dangerous myth.</span>
+                </h2>
+                <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+                  <p>
+                    Cybercriminals aren't just looking for Fortune 500 companies. They use automated bots to scan the internet for vulnerabilities—any vulnerability.
                   </p>
+                  <p>
+                    If your network has an open door, they will walk through it. Ransomware doesn't discriminate by business size. In fact, small businesses are often preferred targets because they typically lack the defenses of larger corporations.
+                  </p>
+                  <div className="p-6 bg-destructive/10 border border-destructive/20 rounded-2xl mt-8">
+                    <p className="text-destructive font-medium flex gap-3 items-start">
+                      <FileWarning className="w-6 h-6 shrink-0 mt-0.5" />
+                      Without proper backups and security hygiene, a single click can shut down your operations for days or weeks.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-               {[
-                 { icon: Lock, title: "Ransomware", desc: "Data held hostage" },
-                 { icon: Server, title: "Downtime", desc: "Lost revenue hours" },
-                 { icon: FileWarning, title: "Data Loss", desc: "Permanent deletion" },
-                 { icon: ShieldAlert, title: "Liability", desc: "Legal exposure" }
-               ].map((item, i) => (
-                 <motion.div
-                   key={i}
-                   initial={{ opacity: 0, y: 20 }}
-                   whileInView={{ opacity: 1, y: 0 }}
-                   viewport={{ once: true }}
-                   transition={{ delay: i * 0.1 }}
-                   className="bg-background border border-white/5 p-6 rounded-xl hover:border-primary/30 transition-colors group"
-                 >
-                   <item.icon className="w-8 h-8 text-muted-foreground mb-4 group-hover:text-primary transition-colors" />
-                   <h3 className="font-bold text-white mb-1">{item.title}</h3>
-                   <p className="text-sm text-muted-foreground">{item.desc}</p>
-                 </motion.div>
-               ))}
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                 {[
+                   { icon: Lock, title: "Ransomware", desc: "Data held hostage" },
+                   { icon: Server, title: "Downtime", desc: "Lost revenue hours" },
+                   { icon: FileWarning, title: "Data Loss", desc: "Permanent deletion" },
+                   { icon: ShieldAlert, title: "Liability", desc: "Legal exposure" }
+                 ].map((item, i) => (
+                   <motion.div
+                     key={i}
+                     initial={{ opacity: 0, y: 20 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true }}
+                     transition={{ delay: i * 0.1 }}
+                     className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-primary/30 transition-all group backdrop-blur-md"
+                   >
+                     <item.icon className="w-10 h-10 text-muted-foreground mb-4 group-hover:text-primary transition-colors" />
+                     <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                     <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                   </motion.div>
+                 ))}
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Preview */}
       <section className="py-24 relative">
-        <div className="container px-4 mx-auto">
+        <div className="container px-4 mx-auto max-w-6xl">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-family-display font-bold mb-4">Our Core Defenses</h2>
+            <h2 className="text-3xl md:text-5xl font-family-display font-bold mb-6">Our Core Defenses</h2>
             <p className="text-muted-foreground text-lg">
               We focus on the three pillars of fundamental IT security to keep your business operational and safe.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-card border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 group">
-              <CardHeader>
-                <ShieldAlert className="w-12 h-12 text-primary mb-4" />
-                <CardTitle className="text-xl font-family-display">IT Risk Assessment</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  A comprehensive health audit of your technology stack. We identify vulnerabilities before hackers do.
+            {[
+              { icon: ShieldAlert, title: "IT Risk Assessment", desc: "A comprehensive health audit of your technology stack. We identify vulnerabilities before hackers do." },
+              { icon: Database, title: "Backup Validation", desc: "Having backups isn't enough. We verify they actually work and can be restored when disaster strikes." },
+              { icon: Network, title: "Network Cleanup", desc: "Organization is security. We map your network, remove clutter, and create clear documentation." }
+            ].map((service, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-10 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl hover:border-primary/50 transition-all duration-300 shadow-[0_0_40px_-15px_rgba(59,130,246,0.1)] group text-center"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-6 group-hover:scale-110 transition-transform">
+                  <service.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-family-display font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {service.desc}
                 </p>
                 <Link href="/services">
-                  <a className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform">
-                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                  <a className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-transform">
+                    Learn more <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 group">
-              <CardHeader>
-                <Database className="w-12 h-12 text-primary mb-4" />
-                <CardTitle className="text-xl font-family-display">Backup Validation</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Having backups isn't enough. We verify they actually work and can be restored when disaster strikes.
-                </p>
-                <Link href="/services">
-                  <a className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform">
-                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 group">
-              <CardHeader>
-                <Network className="w-12 h-12 text-primary mb-4" />
-                <CardTitle className="text-xl font-family-display">Network Cleanup</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Organization is security. We map your network, remove clutter, and create clear documentation.
-                </p>
-                <Link href="/services">
-                  <a className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform">
-                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
-                </Link>
-              </CardContent>
-            </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-primary/5 border-t border-white/5">
-        <div className="container px-4 mx-auto text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-family-display font-bold mb-6">Ready to secure your business?</h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Don't wait for a breach to think about security. Let's start with a conversation about your current setup.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="h-14 px-8 text-lg font-medium shadow-xl shadow-primary/20">
-              Get your free consultation
-            </Button>
-          </Link>
+      <section className="py-24 relative overflow-hidden">
+        <div className="container px-4 mx-auto max-w-4xl relative z-10 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-16 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] relative overflow-hidden"
+          >
+            <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-primary/10 rounded-full blur-[100px]" />
+            <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-[100px]" />
+            
+            <h2 className="text-3xl md:text-5xl font-family-display font-bold mb-8 relative z-10">Ready to secure your business?</h2>
+            <p className="text-xl text-muted-foreground mb-10 relative z-10 max-w-2xl mx-auto">
+              Don't wait for a breach to think about security. Let's start with a conversation about your current setup.
+            </p>
+            <Link href="/contact">
+              <Button size="lg" className="h-14 px-10 text-lg font-medium shadow-xl shadow-primary/20 relative z-10">
+                Get your free consultation
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>

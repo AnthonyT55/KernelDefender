@@ -5,20 +5,26 @@ import { Link } from "wouter";
 
 export default function About() {
   return (
-    <div className="pt-24 pb-20">
-      <div className="container px-4 mx-auto max-w-4xl">
+    <div className="pt-24 pb-20 relative overflow-hidden">
+      <div className="container px-4 mx-auto max-w-4xl relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-16 p-12 md:p-16 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] relative overflow-hidden group"
         >
-          <h1 className="text-4xl md:text-6xl font-family-display font-bold mb-6">About KernelDefender</h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <div className="absolute -top-24 -left-24 w-48 h-48 bg-primary/20 rounded-full blur-[80px]" />
+          <h1 className="text-4xl md:text-6xl font-family-display font-bold mb-6 relative z-10">About KernelDefender</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed relative z-10">
             We are a dedicated cybersecurity firm based in Danville, Virginia, committed to protecting local businesses from the evolving landscape of digital threats.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 gap-12 mb-20 p-8 md:p-12 rounded-3xl bg-white/[0.01] border border-white/10 backdrop-blur-xl"
+        >
           <div className="prose prose-invert prose-lg text-muted-foreground">
             <p>
               Founded on the principle that <strong>security is a right, not a luxury</strong>, KernelDefender brings enterprise-grade IT protection to businesses of all sizes.
@@ -31,7 +37,7 @@ export default function About() {
             </p>
           </div>
           <div className="grid gap-6">
-            <div className="bg-card border border-white/10 p-6 rounded-xl flex items-start gap-4">
+            <div className="bg-white/[0.03] border border-white/5 p-6 rounded-2xl flex items-start gap-4 hover:border-primary/30 transition-colors">
               <div className="p-3 bg-primary/10 rounded-lg text-primary">
                 <ShieldCheck className="w-6 h-6" />
               </div>
@@ -41,7 +47,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="bg-card border border-white/10 p-6 rounded-xl flex items-start gap-4">
+            <div className="bg-white/[0.03] border border-white/5 p-6 rounded-2xl flex items-start gap-4 hover:border-primary/30 transition-colors">
               <div className="p-3 bg-primary/10 rounded-lg text-primary">
                 <Fingerprint className="w-6 h-6" />
               </div>
@@ -51,7 +57,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-card border border-white/10 p-6 rounded-xl flex items-start gap-4">
+            <div className="bg-white/[0.03] border border-white/5 p-6 rounded-2xl flex items-start gap-4 hover:border-primary/30 transition-colors">
               <div className="p-3 bg-primary/10 rounded-lg text-primary">
                 <Lock className="w-6 h-6" />
               </div>
@@ -61,7 +67,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="bg-white/[0.02] border border-white/10 backdrop-blur-xl rounded-2xl p-8 md:p-12 text-center shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]">
           <h2 className="text-3xl font-family-display font-bold mb-4">Partner with KernelDefender</h2>
