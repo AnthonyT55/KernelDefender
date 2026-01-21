@@ -103,13 +103,13 @@ export default function Services() {
         </div>
 
         <div className="mt-24 text-center">
-          <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-12">
+          <div className="bg-white/[0.02] border border-white/10 backdrop-blur-xl rounded-3xl p-12 shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]">
             <h3 className="text-2xl font-bold mb-4">Not sure where to start?</h3>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Most businesses start with our Risk Assessment to get a clear picture of their security posture.
             </p>
             <Link href="/contact">
-              <Button size="lg">Contact Us Today</Button>
+              <Button size="lg">Get your free consultation</Button>
             </Link>
           </div>
         </div>

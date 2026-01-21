@@ -198,13 +198,13 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-primary/5 border-t border-white/5">
         <div className="container px-4 mx-auto text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Ready to secure your business?</h2>
+          <h2 className="text-3xl md:text-4xl font-family-display font-bold mb-6">Ready to secure your business?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Don't wait for a breach to think about security. Let's start with a conversation about your current setup.
           </p>
           <Link href="/contact">
             <Button size="lg" className="h-14 px-8 text-lg font-medium shadow-xl shadow-primary/20">
-              Schedule Your Consultation
+              Get your free consultation
             </Button>
           </Link>
         </div>

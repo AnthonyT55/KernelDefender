@@ -42,7 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <Link href="/contact">
               <Button size="sm" className="font-medium">
-                Contact Us
+                Get your free consultation
               </Button>
             </Link>
           </nav>
@@ -54,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-card border-l border-white/10">
+            <SheetContent side="right" className="bg-card/80 border-l border-white/10 backdrop-blur-xl">
               <div className="flex flex-col gap-6 mt-8">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href}>
@@ -70,7 +70,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 ))}
                 <Link href="/contact">
                   <a onClick={() => setIsOpen(false)}>
-                    <Button className="w-full">Contact Us</Button>
+                    <Button className="w-full">Get your free consultation</Button>
                   </a>
                 </Link>
               </div>
@@ -83,7 +83,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
 
-      <footer className="border-t border-white/10 bg-card py-12 mt-20">
+      <footer className="border-t border-white/10 bg-card/50 backdrop-blur-lg py-12 mt-20">
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
@@ -97,7 +97,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
           
           <div>
-            <h3 className="font-display font-bold mb-4">Services</h3>
+            <h3 className="font-family-display font-bold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>IT Risk Assessment</li>
               <li>Backup Validation</li>
@@ -106,11 +106,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div>
-            <h3 className="font-display font-bold mb-4">Contact</h3>
+            <h3 className="font-family-display font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Danville, VA</li>
               <li>
-                <Link href="/contact"><a className="hover:text-primary transition-colors">Get in touch</a></Link>
+                <Link href="/contact"><a className="hover:text-primary transition-colors">Get your free consultation</a></Link>
               </li>
             </ul>
           </div>

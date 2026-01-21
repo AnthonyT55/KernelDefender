@@ -63,13 +63,13 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-card border border-white/10 rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-white/[0.02] border border-white/10 backdrop-blur-xl rounded-2xl p-8 md:p-12 text-center shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]">
           <h2 className="text-3xl font-family-display font-bold mb-4">Partner with KernelDefender</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Your data is your most valuable asset. Let us help you protect it with professional rigor and technical expertise.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="px-8">Get in Touch</Button>
+            <Button size="lg" className="px-8">Get your free consultation</Button>
           </Link>
         </div>
       </div>
