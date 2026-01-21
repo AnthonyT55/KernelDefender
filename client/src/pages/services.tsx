@@ -48,20 +48,24 @@ export default function Services() {
   ];
 
   return (
-    <div className="pt-24 pb-20">
-      <div className="container px-4 mx-auto">
+    <div className="pt-24 pb-20 relative">
+      <div className="container px-4 mx-auto relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-20 p-12 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] relative overflow-hidden group"
         >
-          <h1 className="text-4xl md:text-6xl font-family-display font-bold mb-6">Our Services</h1>
-          <p className="text-xl text-muted-foreground">
+          {/* Blue Halo Light Effect */}
+          <div className="absolute -top-24 -left-24 w-48 h-48 bg-primary/20 rounded-full blur-[80px] group-hover:bg-primary/30 transition-colors" />
+          <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-[80px] group-hover:bg-primary/30 transition-colors" />
+          
+          <h1 className="text-4xl md:text-6xl font-family-display font-bold mb-6 relative z-10">Our Services</h1>
+          <p className="text-xl text-muted-foreground relative z-10">
             Specialized cybersecurity interventions designed to harden your infrastructure and provide peace of mind.
           </p>
         </motion.div>
 
-        <div className="space-y-20">
+        <div className="space-y-12">
           {services.map((service, index) => (
             <motion.div 
               key={service.id}
@@ -69,16 +73,22 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
-              className="grid md:grid-cols-2 gap-12 items-center"
+              className="p-8 md:p-12 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(59,130,246,0.2)] relative overflow-hidden group hover:border-primary/30 transition-all duration-500"
             >
-              <div className={`space-y-6 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                <h2 className="text-3xl font-family-display font-bold">{service.title}</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-                <div className="bg-card border border-white/5 rounded-xl p-6">
+              {/* Subtle Blue Halo for each service card */}
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-[100px] group-hover:bg-primary/15 transition-colors" />
+              
+              <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <h2 className="text-3xl font-family-display font-bold">{service.title}</h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+                
+                <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 backdrop-blur-md">
                   <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-primary">Key Deliverables</h3>
-                  <ul className="space-y-3">
+                  <ul className="grid sm:grid-cols-1 gap-3">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
                         <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
@@ -87,10 +97,6 @@ export default function Services() {
                     ))}
                   </ul>
                 </div>
-              </div>
-              
-              <div className={`relative ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-20" />
               </div>
             </motion.div>
           ))}
