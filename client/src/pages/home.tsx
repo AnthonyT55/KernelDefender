@@ -94,7 +94,7 @@ export default function Home() {
             </motion.h1>
             
             <motion.div variants={fadeIn} className="flex flex-col items-center gap-4 justify-center pt-8 relative z-10">
-              <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="h-16 px-12 text-lg font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
                   Book Your Free 30-Minute Strategy Call
                 </Button>
@@ -156,7 +156,7 @@ export default function Home() {
             <p className="text-xl text-muted-foreground mb-10 relative z-10 max-w-2xl mx-auto">
               Get an expert assessment of your IT needs and let us build the reliable infrastructure your business deserves.
             </p>
-            <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="h-14 px-10 text-lg font-medium shadow-lg shadow-primary/20 relative z-10">
                 Book Your Strategy Call
               </Button>

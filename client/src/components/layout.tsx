@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             >
               Services
             </a>
-            <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="font-medium">
                 Book Your Strategy Call
               </Button>
