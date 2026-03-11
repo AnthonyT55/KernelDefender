@@ -23,31 +23,31 @@ export default function Home() {
     {
       icon: Network,
       title: "Network Audit + Diagram Deliverable",
-      price: "$300 - $500",
+      price: "",
       desc: "A comprehensive review of your current network infrastructure, identifying bottlenecks and security gaps, delivered with a professional network diagram."
     },
     {
       icon: Cloud,
       title: "Cloud Migration",
-      price: "$800 - $2500 depending on the job",
+      price: "",
       desc: "Seamless transition of your on-premise systems to secure cloud environments, ensuring zero data loss and minimal downtime."
     },
     {
       icon: Server,
       title: "Server Setup + Management Retainer",
-      price: "$500 - $1,000 / month",
+      price: "",
       desc: "End-to-end server configuration, patching, monitoring, and ongoing maintenance to keep your core infrastructure running flawlessly."
     },
     {
       icon: Users,
       title: "AD + Group Policy + RBAC Setup/Fix",
-      price: "$400 - $800",
+      price: "",
       desc: "Secure user identity management, role-based access control, and group policy enforcement to protect your sensitive company data."
     },
     {
       icon: Shield,
       title: "Firewall + Infrastructure Setup",
-      price: "$600 - $1,500",
+      price: "",
       desc: "Deployment of enterprise-grade firewalls and network defenses to keep bad actors out of your business."
     }
   ];
@@ -77,10 +77,6 @@ export default function Home() {
             {/* Blue Halo Light Effect */}
             <div className="absolute -top-32 -left-32 w-80 h-80 bg-primary/20 rounded-full blur-[120px] group-hover:bg-primary/30 transition-colors" />
             <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-primary/20 rounded-full blur-[120px] group-hover:bg-primary/30 transition-colors" />
-
-            <motion.div variants={fadeIn} className="flex justify-center mb-8 relative z-10">
-              <img src="/logo.png" alt="KernelDefender Logo" className="h-24 md:h-32 w-auto object-contain brightness-0 invert mix-blend-plus-lighter drop-shadow-2xl" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
-            </motion.div>
 
             <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-10 relative z-10">
               <span className="relative flex h-2 w-2">
@@ -135,9 +131,6 @@ export default function Home() {
                   <service.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-family-display font-bold text-foreground mb-3">{service.title}</h3>
-                <div className="text-primary font-mono font-medium mb-6 bg-primary/5 inline-block px-3 py-1 rounded-md w-fit">
-                  {service.price}
-                </div>
                 <p className="text-muted-foreground leading-relaxed flex-1">
                   {service.desc}
                 </p>
