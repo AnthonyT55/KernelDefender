@@ -19,12 +19,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans selection:bg-primary/20">
-      <header className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
+      <header className="fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 group cursor-pointer">
-              <Shield className="h-6 w-6 text-primary transition-transform group-hover:scale-110" />
-              <span className="font-family-display font-bold text-xl tracking-tight">
+              <div className="h-8 w-auto relative flex items-center justify-center overflow-hidden">
+                 <img src="/logo.png" alt="KernelDefender Logo" className="h-8 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'block'; }} />
+                 <Shield className="h-6 w-6 text-primary hidden transition-transform group-hover:scale-110" />
+              </div>
+              <span className="font-family-display font-bold text-xl tracking-tight text-foreground">
                 Kernel<span className="text-primary">Defender</span>
               </span>
             </div>
@@ -51,11 +54,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
 
-      <footer className="border-t border-white/10 bg-card/50 backdrop-blur-lg py-12 mt-20">
+      <footer className="border-t border-border bg-muted/30 backdrop-blur-lg py-12 mt-20">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-primary" />
-            <span className="font-family-display font-bold text-lg">KernelDefender</span>
+            <div className="h-6 w-auto relative flex items-center justify-center overflow-hidden">
+               <img src="/logo.png" alt="KernelDefender Logo" className="h-6 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'block'; }} />
+               <Shield className="h-5 w-5 text-primary hidden" />
+            </div>
+            <span className="font-family-display font-bold text-lg text-foreground">KernelDefender</span>
           </div>
           <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
             Professional IT, Infrastructure, and Networking services. 
