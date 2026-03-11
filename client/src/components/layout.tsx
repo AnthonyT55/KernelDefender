@@ -30,20 +30,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
-            <a 
-              href="#services" 
-              onClick={(e) => handleNavClick(e, 'services')}
-              className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground cursor-pointer"
-            >
-              Services
-            </a>
+          <div className="flex items-center gap-4 md:gap-8">
+            <nav className="hidden md:flex items-center gap-8">
+              <a 
+                href="#services" 
+                onClick={(e) => handleNavClick(e, 'services')}
+                className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground cursor-pointer"
+              >
+                Services
+              </a>
+            </nav>
             <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer">
-              <Button size="sm" className="font-medium">
-                Book Your Strategy Call
+              <Button size="sm" className="font-medium text-xs sm:text-sm px-3 py-1.5 sm:px-4 h-auto sm:h-9">
+                <span className="hidden sm:inline">Book Your Strategy Call</span>
+                <span className="sm:hidden">Book Call</span>
               </Button>
             </a>
-          </nav>
+          </div>
         </div>
       </header>
 

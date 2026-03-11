@@ -93,13 +93,13 @@ export default function Home() {
               </span>
             </motion.h1>
             
-            <motion.div variants={fadeIn} className="flex flex-col items-center gap-4 justify-center pt-8 relative z-10">
-              <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="h-16 px-12 text-lg font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
+            <motion.div variants={fadeIn} className="flex flex-col items-center gap-4 justify-center pt-8 relative z-10 w-full px-4 sm:px-0">
+              <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto h-auto py-4 sm:h-16 px-6 sm:px-12 text-base md:text-lg font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300 whitespace-normal text-center leading-tight">
                   Book Your Free 30-Minute Strategy Call
                 </Button>
               </a>
-              <p className="text-sm text-muted-foreground max-w-sm mt-2">
+              <p className="text-sm text-muted-foreground max-w-sm mt-2 text-center">
                 This strategy call acts as your initial consultation and provides you with a custom quote.
               </p>
             </motion.div>
@@ -156,14 +156,16 @@ export default function Home() {
             <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-[100px]" />
             
             <h2 className="text-3xl md:text-5xl font-family-display font-bold mb-6 text-foreground relative z-10">Ready to secure your business?</h2>
-            <p className="text-xl text-muted-foreground mb-10 relative z-10 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-10 relative z-10 max-w-2xl mx-auto px-4 sm:px-0">
               Get an expert assessment of your IT needs and let us build the reliable infrastructure your business deserves.
             </p>
-            <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="h-14 px-10 text-lg font-medium shadow-lg shadow-primary/20 relative z-10">
-                Book Your Strategy Call
-              </Button>
-            </a>
+            <div className="px-4 sm:px-0 relative z-10">
+              <a href="https://calendly.com/contact-kerneldefender/30min" target="_blank" rel="noopener noreferrer" className="block w-full sm:inline-block sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto h-auto py-4 sm:h-14 px-6 sm:px-10 text-base md:text-lg font-medium shadow-lg shadow-primary/20 whitespace-normal text-center leading-tight">
+                  Book Your Strategy Call
+                </Button>
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
