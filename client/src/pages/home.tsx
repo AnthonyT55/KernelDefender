@@ -113,7 +113,10 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-family-display font-bold mb-6 text-foreground">Our Services</h2>
             <p className="text-muted-foreground text-lg">
-              Clear pricing. Professional execution. We provide enterprise-grade infrastructure and networking solutions tailored to your business.
+              Professional execution. We provide enterprise-grade infrastructure and networking solutions tailored to your business.
+            </p>
+            <p className="mt-6 text-xl font-medium text-primary/90 italic">
+              "Pricing based on network size and scope. Book a free call to get your consultation + quote."
             </p>
           </div>
 
