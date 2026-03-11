@@ -19,25 +19,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/">
-            <a className="flex items-center gap-2 group">
+            <div className="flex items-center gap-2 group cursor-pointer">
               <Shield className="h-6 w-6 text-primary transition-transform group-hover:scale-110" />
               <span className="font-family-display font-bold text-xl tracking-tight">
                 Kernel<span className="text-primary">Defender</span>
               </span>
-            </a>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <a
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                <div
+                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
                     location === link.href ? "text-primary" : "text-muted-foreground"
                   }`}
                 >
                   {link.label}
-                </a>
+                </div>
               </Link>
             ))}
             <Link href="/contact">
@@ -58,20 +58,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex flex-col gap-6 mt-8">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href}>
-                    <a
+                    <div
                       onClick={() => setIsOpen(false)}
-                      className={`text-lg font-medium transition-colors hover:text-primary ${
+                      className={`text-lg font-medium transition-colors hover:text-primary cursor-pointer ${
                         location === link.href ? "text-primary" : "text-muted-foreground"
                       }`}
                     >
                       {link.label}
-                    </a>
+                    </div>
                   </Link>
                 ))}
                 <Link href="/contact">
-                  <a onClick={() => setIsOpen(false)}>
+                  <div onClick={() => setIsOpen(false)}>
                     <Button className="w-full">Get your free consultation</Button>
-                  </a>
+                  </div>
                 </Link>
               </div>
             </SheetContent>
@@ -110,7 +110,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Danville, VA</li>
               <li>
-                <Link href="/contact"><a className="hover:text-primary transition-colors">Get your free consultation</a></Link>
+                <Link href="/contact"><div className="hover:text-primary transition-colors cursor-pointer">Get your free consultation</div></Link>
               </li>
             </ul>
           </div>

@@ -169,9 +169,9 @@ export default function Home() {
                   {service.desc}
                 </p>
                 <Link href="/services">
-                  <a className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-transform">
+                  <div className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-transform cursor-pointer">
                     Learn more <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
+                  </div>
                 </Link>
               </motion.div>
             ))}
