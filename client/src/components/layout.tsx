@@ -24,7 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Link href="/">
             <div className="flex items-center gap-2 group cursor-pointer">
               <div className="h-8 w-auto relative flex items-center justify-center overflow-hidden">
-                 <img src="/logo.png" alt="KernelDefender Logo" className="h-8 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'block'; }} />
+                 <img src="/logo.png" alt="KernelDefender Logo" className="h-8 w-auto object-contain brightness-0 invert mix-blend-plus-lighter opacity-90" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'block'; }} />
                  <Shield className="h-6 w-6 text-primary hidden transition-transform group-hover:scale-110" />
               </div>
               <span className="font-family-display font-bold text-xl tracking-tight text-foreground">
@@ -58,7 +58,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="flex items-center gap-2">
             <div className="h-6 w-auto relative flex items-center justify-center overflow-hidden">
-               <img src="/logo.png" alt="KernelDefender Logo" className="h-6 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'block'; }} />
+               <img src="/logo.png" alt="KernelDefender Logo" className="h-6 w-auto object-contain brightness-0 invert mix-blend-plus-lighter opacity-90" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'block'; }} />
                <Shield className="h-5 w-5 text-primary hidden" />
             </div>
             <span className="font-family-display font-bold text-lg text-foreground">KernelDefender</span>
